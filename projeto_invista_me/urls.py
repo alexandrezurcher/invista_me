@@ -17,9 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from invista_me import views
+from usuarios import views as usuario_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('conta/',usuario_views.novo_usuario, name='novo_usuario'),
     path('',views.investimentos, name='investimentos'),
     path('novo_investimento/', views.criar, name='novo'),
     path('novo_investimento/<int:id_investimento>', views.editar, name='editar'),

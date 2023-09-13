@@ -46,4 +46,6 @@ def excluir(request,id_investimento):
     if request.method == 'POST':       
         investimento.delete()
         return redirect('investimentos')    
-    return render(request,'investimentos/confirmar_exclusao.html', {'item':investimento})    
+    return render(request,'investimentos/confirmar_exclusao.html', {'item':investimento}) 
+
+   
